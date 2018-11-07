@@ -1,0 +1,8 @@
+<aura:component controller = "DynamicDataTableWithFieldSetController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:handler name = 'init' value = "{!this}" action = "{!c.doInit}"/>
+	<aura:attribute name = "myData" type = "object"/>
+	<aura:attribute name = "columns" type = "list"/>
+	<lightning:dataTable data="{! v.myData }" 
+        columns="{! v.columns }" 
+        keyField="Id"/>
+</aura:component>
